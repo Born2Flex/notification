@@ -3,3 +3,19 @@ server:
 spring:
   application:
     name: notification
+  activemq:
+    broker-url: tcp://localhost:61616
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+mail:
+  templates:
+    folder: mail-templates/

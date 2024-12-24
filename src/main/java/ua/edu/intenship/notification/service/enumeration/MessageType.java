@@ -4,13 +4,13 @@ import lombok.Getter;
 
 @Getter
 public enum MessageType {
-    USER_REGISTERED("user_registered_template"),
-    USER_DELETED("user_deleted_template"),
-    INTERVIEW_SCHEDULED("interview_scheduled_template");
+    USER_REGISTERED("user-registered"),
+    USER_DELETED("user-deleted"),
+    INTERVIEW_SCHEDULED("interview-scheduled");
 
-    private final String emailTemplate;
+    private final String templateName;
 
-    MessageType(String emailTemplate) {
-        this.emailTemplate = emailTemplate;
+    MessageType(String templateName) {
+        this.templateName = templateName;
     }
 }

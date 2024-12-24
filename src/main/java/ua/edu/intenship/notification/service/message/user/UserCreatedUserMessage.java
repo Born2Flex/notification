@@ -9,7 +9,7 @@ import ua.edu.intenship.notification.service.enumeration.MessageType;
 @EqualsAndHashCode(callSuper=true)
 @NoArgsConstructor
 public class UserCreatedUserMessage extends BaseUserMessage {
-    public UserCreatedUserMessage(String email) {
-        super(email, MessageType.USER_REGISTERED);
+    public UserCreatedUserMessage(String email, String fullName) {
+        super(email, fullName, MessageType.USER_REGISTERED);
     }
 }

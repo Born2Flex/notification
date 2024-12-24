@@ -9,7 +9,7 @@ import ua.edu.intenship.notification.service.enumeration.MessageType;
 @EqualsAndHashCode(callSuper=true)
 @NoArgsConstructor
 public class UserDeletedUserMessage extends BaseUserMessage {
-    public UserDeletedUserMessage(String email) {
-        super(email, MessageType.USER_DELETED);
+    public UserDeletedUserMessage(String email, String fullName) {
+        super(email, fullName, MessageType.USER_DELETED);
     }
 }
