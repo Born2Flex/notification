@@ -1,4 +1,4 @@
-package ua.edu.intenship.notification.service.enumeration;
+package ua.edu.internship.notification.service.enumeration;
 
 import lombok.Getter;
 

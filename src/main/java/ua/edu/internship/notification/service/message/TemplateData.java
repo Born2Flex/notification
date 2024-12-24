@@ -1,4 +1,4 @@
-package ua.edu.intenship.notification.service.message;
+package ua.edu.internship.notification.service.message;
 
 import java.util.Map;
 

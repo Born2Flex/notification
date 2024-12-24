@@ -1,10 +1,10 @@
-package ua.edu.intenship.notification.service.message.user;
+package ua.edu.internship.notification.service.message.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ua.edu.intenship.notification.service.enumeration.MessageType;
-import ua.edu.intenship.notification.service.message.TemplateData;
+import ua.edu.internship.notification.service.enumeration.MessageType;
+import ua.edu.internship.notification.service.message.TemplateData;
 import java.util.Map;
 
 @Data

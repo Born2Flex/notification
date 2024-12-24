@@ -1,4 +1,4 @@
-package ua.edu.intenship.notification.service.business;
+package ua.edu.internship.notification.service.business;
 
 import jakarta.mail.Session;
 import jakarta.mail.internet.MimeMessage;
@@ -11,9 +11,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import ua.edu.intenship.notification.service.enumeration.MessageType;
-import ua.edu.intenship.notification.service.message.interview.InterviewScheduledMessage;
-import ua.edu.intenship.notification.service.message.user.UserRegisteredMessage;
+import ua.edu.internship.notification.service.enumeration.MessageType;
+import ua.edu.internship.notification.service.message.interview.InterviewScheduledMessage;
+import ua.edu.internship.notification.service.message.user.UserRegisteredMessage;
 import java.time.LocalDateTime;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;

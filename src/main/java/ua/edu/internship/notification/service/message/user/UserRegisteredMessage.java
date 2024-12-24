@@ -1,9 +1,9 @@
-package ua.edu.intenship.notification.service.message.user;
+package ua.edu.internship.notification.service.message.user;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import ua.edu.intenship.notification.service.enumeration.MessageType;
+import ua.edu.internship.notification.service.enumeration.MessageType;
 
 @Data
 @EqualsAndHashCode(callSuper=true)

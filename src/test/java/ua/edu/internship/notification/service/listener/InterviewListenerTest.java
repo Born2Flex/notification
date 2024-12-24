@@ -1,4 +1,4 @@
-package ua.edu.intenship.notification.service.listener;
+package ua.edu.internship.notification.service.listener;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -6,9 +6,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import ua.edu.intenship.notification.service.business.MailService;
-import ua.edu.intenship.notification.service.enumeration.MessageType;
-import ua.edu.intenship.notification.service.message.interview.InterviewScheduledMessage;
+import ua.edu.internship.notification.service.business.MailService;
+import ua.edu.internship.notification.service.enumeration.MessageType;
+import ua.edu.internship.notification.service.message.interview.InterviewScheduledMessage;
 import java.time.LocalDateTime;
 import static org.mockito.Mockito.verify;
 

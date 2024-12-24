@@ -1,4 +1,4 @@
-package ua.edu.intenship.notification.config;
+package ua.edu.internship.notification.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

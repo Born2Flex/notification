@@ -1,11 +1,11 @@
-package ua.edu.intenship.notification.service.listener;
+package ua.edu.internship.notification.service.listener;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
-import ua.edu.intenship.notification.service.business.MailService;
-import ua.edu.intenship.notification.service.message.interview.InterviewScheduledMessage;
+import ua.edu.internship.notification.service.business.MailService;
+import ua.edu.internship.notification.service.message.interview.InterviewScheduledMessage;
 
 @Slf4j
 @Component

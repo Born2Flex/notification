@@ -1,4 +1,4 @@
-package ua.edu.intenship.notification.service.business;
+package ua.edu.internship.notification.service.business;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
@@ -9,8 +9,8 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import ua.edu.intenship.notification.service.message.interview.InterviewScheduledMessage;
-import ua.edu.intenship.notification.service.message.user.BaseUserMessage;
+import ua.edu.internship.notification.service.message.interview.InterviewScheduledMessage;
+import ua.edu.internship.notification.service.message.user.BaseUserMessage;
 
 @Slf4j
 @Service
