@@ -14,7 +14,7 @@ public class UserListener {
     private final MailService mailService;
 
     @JmsListener(destination = "user.queue")
-    public void processUserEvent(BaseUserMessage message) {
+    public void processUserMessage(BaseUserMessage message) {
         log.info("Received new user message: {}", message);
         mailService.sendUserNotification(message);
     }

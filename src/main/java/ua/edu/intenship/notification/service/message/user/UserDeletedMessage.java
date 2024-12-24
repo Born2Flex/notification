@@ -8,8 +8,8 @@ import ua.edu.intenship.notification.service.enumeration.MessageType;
 @Data
 @EqualsAndHashCode(callSuper=true)
 @NoArgsConstructor
-public class UserCreatedUserMessage extends BaseUserMessage {
-    public UserCreatedUserMessage(String email, String fullName) {
-        super(email, fullName, MessageType.USER_REGISTERED);
+public class UserDeletedMessage extends BaseUserMessage {
+    public UserDeletedMessage(String email, String fullName) {
+        super(email, fullName, MessageType.USER_DELETED);
     }
 }
