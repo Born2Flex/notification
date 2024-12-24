@@ -13,7 +13,7 @@ import ua.edu.internship.notification.service.message.user.BaseUserMessage;
 public class UserListener {
     private final MailService mailService;
 
-    @JmsListener(destination = "user.queue")
+    @JmsListener(destination = "${user.queue}")
     public void processUserMessage(BaseUserMessage message) {
         log.info("Received new user message: {}", message);
         mailService.sendUserNotification(message);

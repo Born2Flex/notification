@@ -19,3 +19,7 @@ spring:
 mail:
   templates:
     folder: mail-templates/
+user:
+  queue: user-queue
+interview:
+  queue: interview-queue

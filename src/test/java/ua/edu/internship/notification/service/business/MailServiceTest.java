@@ -13,7 +13,7 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import ua.edu.internship.notification.service.enumeration.MessageType;
 import ua.edu.internship.notification.service.message.interview.InterviewScheduledMessage;
-import ua.edu.internship.notification.service.message.user.UserRegisteredMessage;
+import ua.edu.internship.notification.service.message.user.UserDeletedMessage;
 import java.time.LocalDateTime;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -34,7 +34,7 @@ class MailServiceTest {
     @DisplayName("Should send email user notification")
     void shouldSendEmailUserNotification() {
         // given
-        UserRegisteredMessage message = new UserRegisteredMessage("test@gmail.com", "John Doe");
+        UserDeletedMessage message = new UserDeletedMessage("test@gmail.com", "John Doe");
         MimeMessage mimeMessage = new MimeMessage((Session) null);
         when(templateEngine.process(eq(MessageType.USER_REGISTERED.getTemplateName()), any(Context.class)))
                 .thenReturn("Email body");

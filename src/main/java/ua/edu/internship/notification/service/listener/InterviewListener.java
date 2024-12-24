@@ -13,7 +13,7 @@ import ua.edu.internship.notification.service.message.interview.InterviewSchedul
 public class InterviewListener {
     private final MailService mailService;
 
-    @JmsListener(destination = "interview.queue")
+    @JmsListener(destination = "${interview.queue}")
     public void processInterviewMessage(InterviewScheduledMessage message) {
         log.info("Received new interview message: {}", message);
         mailService.sendInterviewNotification(message);
