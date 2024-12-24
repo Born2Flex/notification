@@ -36,7 +36,7 @@ class MailServiceTest {
         // given
         UserDeletedMessage message = new UserDeletedMessage("test@gmail.com", "John Doe");
         MimeMessage mimeMessage = new MimeMessage((Session) null);
-        when(templateEngine.process(eq(MessageType.USER_REGISTERED.getTemplateName()), any(Context.class)))
+        when(templateEngine.process(eq(MessageType.USER_DELETED.getTemplateName()), any(Context.class)))
                 .thenReturn("Email body");
         when(mailSender.createMimeMessage()).thenReturn(mimeMessage);
 
