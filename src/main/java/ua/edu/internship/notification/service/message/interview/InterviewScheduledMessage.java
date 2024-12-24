@@ -15,16 +15,12 @@ import java.util.Map;
 @AllArgsConstructor
 public class InterviewScheduledMessage implements TemplateData {
     private String interviewerEmail;
-    private String interviewerFullName;
     private String candidateEmail;
-    private String candidateFullName;
     private MessageType messageType;
     private LocalDateTime plannedDateTime;
 
     @Override
     public Map<String, Object> toMap() {
-        return Map.of("interviewer", interviewerFullName,
-                "candidate", candidateFullName,
-                "datetime", plannedDateTime);
+        return Map.of("datetime", plannedDateTime);
     }
 }

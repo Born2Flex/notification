@@ -17,7 +17,6 @@ public abstract class BaseUserMessage implements TemplateData {
 
     @Override
     public Map<String, Object> toMap() {
-        return Map.of("email", email,
-                "fullName", fullName);
+        return Map.of("fullName", fullName);
     }
 }

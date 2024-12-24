@@ -52,8 +52,7 @@ class MailServiceTest {
     void shouldSendEmailInterviewNotification() {
         // given
         InterviewScheduledMessage message = new InterviewScheduledMessage("test1@gmail.com",
-                "John Doe", "test2@gmail.com", "Bob Martin",
-                MessageType.INTERVIEW_SCHEDULED, LocalDateTime.now());
+                "test2@gmail.com", MessageType.INTERVIEW_SCHEDULED, LocalDateTime.now());
         MimeMessage mimeMessage = new MimeMessage((Session) null);
         when(templateEngine.process(eq(MessageType.INTERVIEW_SCHEDULED.getTemplateName()), any(Context.class)))
                 .thenReturn("Email body");

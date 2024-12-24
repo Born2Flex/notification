@@ -24,8 +24,7 @@ class InterviewListenerTest {
     void shouldSendNotificationWhenReceiveMessage() {
         // given
         InterviewScheduledMessage message = new InterviewScheduledMessage("test1@gmail.com",
-                "John Doe", "test2@gmail.com", "Bob Martin",
-                MessageType.INTERVIEW_SCHEDULED, LocalDateTime.now());
+                "test2@gmail.com", MessageType.INTERVIEW_SCHEDULED, LocalDateTime.now());
 
         // when
         underTest.processInterviewMessage(message);
