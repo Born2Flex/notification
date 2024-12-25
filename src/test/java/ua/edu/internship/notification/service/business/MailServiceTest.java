@@ -17,7 +17,6 @@ import ua.edu.internship.notification.service.message.user.UserDeletedMessage;
 import java.time.LocalDateTime;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -62,6 +61,6 @@ class MailServiceTest {
         underTest.sendInterviewNotification(message);
 
         // then
-        verify(mailSender, times(2)).send(mimeMessage);
+        verify(mailSender).send(mimeMessage);
     }
 }

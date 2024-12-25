@@ -25,8 +25,8 @@ public class MailService {
         Context context = new Context();
         context.setVariables(message.toMap());
         String emailText = templateEngine.process(message.getMessageType().getTemplateName(), context);
-        handleSendEmail(message.getInterviewerEmail(), "Interview Notification", emailText);
-        handleSendEmail(message.getCandidateEmail(), "Interview Notification", emailText);
+        handleSendEmail("Interview Notification", emailText,
+                message.getCandidateEmail(), message.getInterviewerEmail());
     }
 
     public void sendUserNotification(BaseUserMessage message) {
@@ -34,19 +34,19 @@ public class MailService {
         Context context = new Context();
         context.setVariables(message.toMap());
         String emailText = templateEngine.process(message.getMessageType().getTemplateName(), context);
-        handleSendEmail(message.getEmail(), "User Notification", emailText);
+        handleSendEmail("User Notification", emailText, message.getEmail());
     }
 
-    private void handleSendEmail(String to, String subject, String text) {
+    private void handleSendEmail(String subject, String text, String... to) {
         try {
-            sendEmail(to, subject, text);
-            log.info("Notification email sent to: {}", to);
+            sendEmail(subject, text, to);
+            log.info("Notification email sent to: {}", (Object[]) to);
         } catch (MessagingException e) {
             log.error("Failed to send notification email to: {}", to, e);
         }
     }
 
-    private void sendEmail(String to, String subject, String text) throws MessagingException {
+    private void sendEmail(String subject, String text, String... to) throws MessagingException {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
         helper.setTo(to);
