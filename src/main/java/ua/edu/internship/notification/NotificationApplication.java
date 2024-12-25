@@ -1,4 +1,4 @@
-package ua.edu.intenship.notification;
+package ua.edu.internship.notification;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
